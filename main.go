@@ -6,6 +6,7 @@ import (
 	"functions_exercises/exercise_2"
 	"functions_exercises/exercise_3"
 	"functions_exercises/exercise_4"
+	"functions_exercises/exercise_5"
 )
 
 func main() {
@@ -51,5 +52,44 @@ func main() {
 
 	fmt.Printf("The min value is: %v, The max value is: %v and the average is: %v\n",
 		minValue, maxValue, averageValue)
+
+	const (
+		dog       = "dog"
+		cat       = "cat"
+		hamster   = "hamster"
+		tarantula = "tarantula"
+	)
+
+	dogsFoodFunc, msg := exercise_5.Animal(dog)
+
+	if msg != "" {
+		fmt.Println(msg)
+	}
+
+	catsFoodFunc, msg := exercise_5.Animal(cat)
+
+	if msg != "" {
+		fmt.Println(msg)
+	}
+
+	hamstersFoodFunc, msg := exercise_5.Animal(hamster)
+
+	if msg != "" {
+		fmt.Println(msg)
+	}
+
+	tarantulasFoodFunc, msg := exercise_5.Animal(tarantula)
+
+	if msg != "" {
+		fmt.Println(msg)
+	}
+
+	var amount float32
+	amount += dogsFoodFunc(10)
+	amount += catsFoodFunc(10)
+	amount += hamstersFoodFunc(10)
+	amount += tarantulasFoodFunc(10)
+
+	fmt.Printf("The final amount for the food is: %v kg\n", amount)
 
 }

@@ -12,7 +12,7 @@ func CalculateStatistics(operationType string) (func(nums ...int) int, string) {
 	case "maximum":
 		return findMaximum, ""
 	default:
-		return nil, ""
+		return nil, "Unexpected operation type. Please check it again and retry"
 	}
 }
 

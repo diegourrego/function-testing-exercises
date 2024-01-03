@@ -2,7 +2,7 @@ package exercise_1
 
 import "fmt"
 
-func SalaryTaxes(employeeSalary float64) {
+func SalaryTaxes(employeeSalary float64) float64 {
 	var tax float64
 
 	if employeeSalary > 50000 {
@@ -14,5 +14,6 @@ func SalaryTaxes(employeeSalary float64) {
 	}
 
 	fmt.Println("Tax total:", tax)
+	return tax
 
 }

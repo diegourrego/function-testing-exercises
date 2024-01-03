@@ -1,8 +1,6 @@
 package exercise_3
 
-import "fmt"
-
-func CalculateSalary(hoursPerMonth float32, category string) (salary float32) {
+func CalculateSalary(hoursPerMonth float32, category string) (salary float32, err string) {
 	switch category {
 	case "C":
 		salary = 1000 * hoursPerMonth
@@ -11,7 +9,7 @@ func CalculateSalary(hoursPerMonth float32, category string) (salary float32) {
 	case "A":
 		salary = (3000 * hoursPerMonth) + calculateMonthlyBonus(3000, 0.5)
 	default:
-		fmt.Println("Unexpected category. Check it and try again.")
+		err = "Unexpected category. Check it and try again."
 		salary = 0.0
 
 	}

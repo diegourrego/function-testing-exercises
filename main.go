@@ -22,7 +22,7 @@ func main() {
 	fmt.Printf("The average of notes is: %v\n", averageOfNotes)
 
 	// Exercise #3:
-	employeeSalary := exercise_3.CalculateSalary(160, "C")
+	employeeSalary, err := exercise_3.CalculateSalary(160, "C")
 	fmt.Printf("Tehe employee salary is: %v\n", employeeSalary)
 
 	const (
